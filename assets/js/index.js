@@ -27,15 +27,15 @@ function getInfo() {
             renderAvatar(res.data)
         },
         // 调用complete
-    //     complete: function (res) {
-    //     // console.log('回调函数');
-    //     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-    //             // 1.强制两空
-    //             localStorage.removeItem('token')
-    //             // 2.强制调到登陆页面
-    //             location.href='/login.html'
-    //         }
-    // }
+        complete: function (res) {
+        // console.log('回调函数');
+        if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+                // 1.强制两空
+                localStorage.removeItem('token')
+                // 2.强制调到登陆页面
+                location.href='/login.html'
+            }
+    }
     })
 }
 // 渲染头像

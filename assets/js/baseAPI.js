@@ -12,13 +12,13 @@ $.ajaxPrefilter(function (options) {
     }
   }
   // 统一的挂在complete
-  options.complete = function (res) {
-    if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-      // 1.强制两空
-      localStorage.removeItem('token')
-      // 2.强制调到登陆页面
-      location.href='/login.html'
-  }
-  }
+  // options.complete = function (res) {
+  //   if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+  //     // 1.强制两空
+  //     localStorage.removeItem('token')
+  //     // 2.强制调到登陆页面
+  //     location.href='/login.html'
+  // }
+  // }
 })
 
